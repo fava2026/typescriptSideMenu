@@ -42,6 +42,7 @@ An application using Apache Cordova, Ionic Framework, and Typescript. Currently 
 	}
 ```
 > Later, you can make modifications to this file as needed. For example, if you want to use TypeScript code in services.js, you can move it from the www/js folder to the source folder, and then include services.ts in the compiler options for the file list (that is, add a "source/services.ts" entry, and so on, under the files entry). You can use both TypeScript and JavaScript in the same file if you want to, and the TypeScript compiler will create the correct JavaScript output.
+
 * open command line, type this
 ```
 npm install -g tsd
@@ -51,6 +52,7 @@ npm install -g tsd
 tsd init
 ```
 >This command installs tsd.json, the typings folder, and tsd.d.ts to the project.
+
 *In the command line, run the following commands to install the correct set of d.ts files for the Ionic app.
 ```
 tsd install cordova --save
