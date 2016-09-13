@@ -1,0 +1,19 @@
+﻿{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "inlineSources": true,
+    "out": "www/js",
+    "target": "es5"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "source/app.ts",
+    "source/controllers.ts",
+    "typings/tsd.d.ts"
+  ]
+}
