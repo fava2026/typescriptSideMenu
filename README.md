@@ -62,6 +62,7 @@ npm install -g typescript
 npm install --save-dev typescript
 ```
 > The d.ts files will be added to the typings folder.
+
 * Move ***.js from the www/js folder to the source folder.
 * Rename app.js to app.ts.
 * When you build later, the compiler will build *.ts and the output will be www/js/***.js. The file will be unchanged by the compiler if you don't add any TypeScript code.
