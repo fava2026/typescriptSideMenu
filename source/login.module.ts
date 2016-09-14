@@ -1,4 +1,5 @@
 ﻿/// <reference path='../typings/tsd.d.ts' />
+
 class LoginCtrl {
     public user: any;
     constructor(private $scope: angular.IScope) {
