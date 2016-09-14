@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 /// <reference path='../typings/tsd.d.ts' />
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'login.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -25,14 +25,21 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
     .state('app', {
-    url: '/app',
-    abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl as ModalCtrl'
-  })
-
+        url: '/app',
+        abstract: true,
+        templateUrl: 'templates/menu.html',
+        controller: 'AppCtrl as ModalCtrl'
+      })
+      .state('app.login', {
+          url: '/login',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/login/views/login.html',
+                  controller: 'LoginCtrl as loginCtrl'
+              }
+          }
+      })
   .state('app.search', {
     url: '/search',
     views: {
