@@ -4,7 +4,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 /// <reference path='../typings/tsd.d.ts' />
-angular.module('starter', ['ionic', 'starter.controllers', 'login.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'login.controllers', 'services'])
     .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
