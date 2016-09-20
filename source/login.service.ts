@@ -1,6 +1,6 @@
 /// <reference path='../typings/tsd.d.ts' />
 
-module services {
+module Service {
     export interface Service {
         getData(): any;
     }
@@ -11,13 +11,17 @@ module services {
             this.http = $http;
         }
         public getData(): any {
-            return this.http.get('https://randomuser.me/api/?results=10').then((data, status, headers, config) => {
+            return this.http.get('http://localhost:8100/data/data.json').then((data, status, headers, config) => {
                 return data;
             }).catch((data, status, headers, config) => {
                 throw new Error('Error');
             });
         }
     }
+
+    angular.module('services', []).service('Service', Service.ServiceHttp);
 }
 
-angular.module( 'services', []).service( 'Service', ServiceHttp );
+
+
+

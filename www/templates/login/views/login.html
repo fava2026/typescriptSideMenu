@@ -1,20 +1,21 @@
 ﻿<ion-view view-title="Login">
     <ion-content>
         <h1>Login</h1>
-        <form name="userValidate" ng-submit="loginCtrl.doLogin(userValidate)" novalidate>
+        <form name="userValidate" ng-submit="loginCtrl.doLogin(user)" novalidate>
             <div class="list">
                 <label class="item item-input">
-                    <input type="text" placeholder="Username" ng-model="user.name" data-ng-required="true">
+                    <input type="text" placeholder="Username" name="username" ng-model="user.username" data-ng-required="true">
                 </label>
-                <code>userValidate.$error.required = {{!!userValidate.$error.required}}</code><br>
+                <span ng-show="userValidate.username.$invalid && !userValidate.username.$pristine"><code>Your name is required</code></span>
             </div>
             <div class="list">
                 <label class="item item-input">
-                    <input type="password" placeholder="Password" ng-model="user.password" data-ng-required="true">
+                    <input type="password" placeholder="Password" name="password" ng-model="user.password" data-ng-required="true">
                 </label>
+                <span ng-show="userValidate.username.$invalid && !userValidate.username.$pristine"><code>Your password is required</code></span>
             </div>
             <div class="padding">
-                <button type="submit" class="button button-block button-positive">Login</button>
+                <button ng-disabled="userValidate.$invalid" type="submit" class="button button-block button-positive">Login</button>
             </div>
         </form>
     </ion-content>
