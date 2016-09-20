@@ -1,5 +1,4 @@
 ﻿/// <reference path='../typings/tsd.d.ts' />
-/// <reference path='./login.service.ts' />
 
 class LoginCtrl {
     public user: any;
@@ -7,11 +6,13 @@ class LoginCtrl {
     public data: any;
     public service: any;
     public state: any;
+    public scope: any;
 
     constructor(private $scope: angular.IScope, Service: Service.ServiceHttp, $state: ng.ui.IStateProvider) {
         this.user = {};
         this.state = $state;
         this.service = Service;
+        this.scope = $scope;
     }
 
     // Perform the login action when the user submits the login form
@@ -24,6 +25,7 @@ class LoginCtrl {
                 this.state.go('app.playlists');
             }
             else {
+                this.scope.message = 'Invalid user';
                 return;
             }
         });

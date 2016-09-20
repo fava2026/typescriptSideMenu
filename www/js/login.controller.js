@@ -1,5 +1,4 @@
 /// <reference path='../typings/tsd.d.ts' />
-/// <reference path='./login.service.ts' />
 var LoginCtrl = (function () {
     function LoginCtrl($scope, Service, $state) {
         this.$scope = $scope;
@@ -7,6 +6,7 @@ var LoginCtrl = (function () {
         this.user = {};
         this.state = $state;
         this.service = Service;
+        this.scope = $scope;
     }
     // Perform the login action when the user submits the login form
     LoginCtrl.prototype.doLogin = function (user) {
@@ -19,6 +19,7 @@ var LoginCtrl = (function () {
                 _this.state.go('app.playlists');
             }
             else {
+                _this.scope.message = 'Invalid user';
                 return;
             }
         });
