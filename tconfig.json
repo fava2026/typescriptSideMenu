@@ -1,19 +1,23 @@
 ﻿{
-  "compilerOptions": {
-    "noImplicitAny": false,
-    "noEmitOnError": true,
-    "removeComments": false,
-    "sourceMap": true,
-    "inlineSources": true,
-    "out": "www/js",
-    "target": "es5"
-  },
-  "exclude": [
-    "node_modules"
-  ],
-  "files": [
-    "source/app.ts",
-    "source/controllers.ts",
-    "typings/tsd.d.ts"
-  ]
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "noEmitOnError": true,
+        "removeComments": false,
+        "sourceMap": true,
+        "inlineSources": true,
+        "out": "www/js",
+        "target": "es5"
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "files": [
+        "source/app.ts",
+        "source/controllers.ts",
+        "source/login.controller.ts",
+        "source/login.module.ts",
+        "source/login.service.ts",
+        "typings/tsd.d.ts"
+    ]
 }

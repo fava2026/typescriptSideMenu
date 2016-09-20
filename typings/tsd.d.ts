@@ -24,5 +24,5 @@
 /// <reference path="ionic/ionic.d.ts" />
 /// <reference path="jquery/jquery.d.ts" />
 /// <reference path="cordova-ionic/cordova-ionic.d.ts" />
-/// <reference path="cordova-ionic/plugins/keyboard.d.ts" />
+/// <reference path="cordova-ionic/plugins/Keyboard.d.ts" />
 /// <reference path="angular-ui-router/angular-ui-router.d.ts" />

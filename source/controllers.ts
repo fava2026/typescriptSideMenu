@@ -8,7 +8,7 @@ class PlaylistCtrl {
     public playlistId: number;
 
     constructor(private $stateParams: ng.ui.IStateParamsService) {
-        this.playlistId = $stateParams["playlistId"];
+        this.playlistId = $stateParams['playlistId'];
     }
 }
 
@@ -20,20 +20,17 @@ class PlaylistsCtrl {
 
     constructor() {
         this.playlists = [
-            { title: "Reggae", id: 1 },
-            { title: "Chill", id: 2 },
-            { title: "Dubstep", id: 3 },
-            { title: "Indie", id: 4 },
-            { title: "Rap", id: 5 },
-            { title: "Cowbell", id: 6 }
+            { title: 'Reggae', id: 1 },
+            { title: 'Chill', id: 2 },
+            { title: 'Dubstep', id: 3 },
+            { title: 'Indie', id: 4 },
+            { title: 'Rap', id: 5 },
+            { title: 'Cowbell', id: 6 }
         ];
     }
 }
 
-angular.module('starter.controllers', ['services'])
+angular.module('starter.controllers', [])
     .controller('AppCtrl', AppCtrl)
     .controller('PlaylistCtrl', PlaylistCtrl)
-    .controller('PlaylistsCtrl', PlaylistsCtrl)
-//angular.module('plunker', ['controllers', 'services']);
-angular.module('login.controllers', ['services']);
-angular.module('services', []);
+    .controller('PlaylistsCtrl', PlaylistsCtrl);

@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 /// <reference path='../typings/tsd.d.ts' />
 
-angular.module('starter', ['ionic', 'starter.controllers', 'login.controllers','services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'login.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

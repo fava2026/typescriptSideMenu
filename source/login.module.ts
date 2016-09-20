@@ -1,24 +1,19 @@
 ﻿/// <reference path='../typings/tsd.d.ts' />
-/// <reference path='./login.module.service.ts' />
 
-class LoginCtrl {
-    public user: any;
-    public service: services.ServiceHttp;
+module Start {
+  export class Module {
+      public app: ng.IModule;
 
-    constructor(private $scope: angular.IScope, serviceHttp: services.ServiceHttp) {
-        this.user = {};
-        this.service = serviceHttp;
-    }
+        constructor( name: string, modules: Array< string > ) {
+            this.app = angular.module( name, modules );
+        };
 
-    // Perform the login action when the user submits the login form
-    public doLogin(user): void {
-        console.log(this.user);
+        public addController( name: string, controller: Function ) {
+            this.app.controller( name, controller );
+        };
 
-        this.service.getData().then(function (data) {
-            console.log(data, 'Hola si');
-        });
-    }
-}
-
-angular.module('login.controllers', ['services'])
-    .controller('LoginCtrl', [LoginCtrl]);
+        public addService( name: string, service: Function ): void {
+            this.app.service( name, service );
+        }
+    };
+};
